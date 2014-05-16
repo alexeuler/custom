@@ -11,7 +11,7 @@ class App.Builder
         updater: @base_update
       base_inner:
         value:
-          material: "BSH498"
+          material: "default"
         updater: @base_inner_update
       buttons:
         value:
@@ -19,22 +19,22 @@ class App.Builder
         updater: @buttons_update
       sleeves:
         value:
-          material: "BSH498"
+          material: "default"
           type: "long"
         updater: @sleeves_update
       collar:
         value:
-          material: "BSH498"
+          material: "default"
           type: "regular"
         updater: @collar_update
       collar_inner:
         value:
-          material: "BSH498"
+          material: "default"
         updater: @collar_inner_update
 
       cuffs:
         value:
-          material: "BSH498"
+          material: "default"
           type: "round"
         updater: @cuffs_update
 
@@ -43,7 +43,7 @@ class App.Builder
       value["updater"].call(@)
 
   update: (params)->
-    unless params["view"] == null
+    if params["view"]
       @view = params["view"]
       @update_all()
       return
@@ -51,7 +51,7 @@ class App.Builder
       unless @eqs(@params[key]["value"], value)
         @update_hash(@params[key]["value"], value)
         @params[key]["updater"].call(@)
-
+    @update_all() if params["base"]
 
   update_hash: (hash, new_hash) ->
     for key, value of new_hash
@@ -73,7 +73,9 @@ class App.Builder
     @set_bg($(".base"), bg)
 
   base_inner_update: ->
-    bg = @params["base_inner"]["value"]["material"]+"_#{@view}_base_placket_inner_slim"
+    material = @params["base_inner"]["value"]["material"]
+    material = @params["base"]["value"]["material"] if material == "default"
+    bg = material+"_#{@view}_base_placket_inner_slim"
     @set_bg($(".base-inner"), bg)
 
   buttons_update: ->
@@ -84,18 +86,26 @@ class App.Builder
     @set_bg($(".cuffs"), prefix+"cuffs")
 
   sleeves_update: ->
-    bg = @params["sleeves"]["value"]["material"]+"_#{@view}_sleeves_"+@params["sleeves"]["value"]["type"]+"_slim"
+    material = @params["sleeves"]["value"]["material"]
+    material = @params["base"]["value"]["material"] if material == "default"
+    bg = material+"_#{@view}_sleeves_"+@params["sleeves"]["value"]["type"]+"_slim"
     @set_bg($(".sleeves"), bg)
 
   collar_update: ->
-    bg = @params["collar"]["value"]["material"]+"_#{@view}_collar_"+@params["collar"]["value"]["type"]
+    material = @params["collar"]["value"]["material"]
+    material = @params["base"]["value"]["material"] if material == "default"
+    bg = material+"_#{@view}_collar_"+@params["collar"]["value"]["type"]
     @set_bg($(".collar"), bg)
 
   collar_inner_update: ->
-    bg = @params["collar_inner"]["value"]["material"]+"_#{@view}_collar_"+@params["collar"]["value"]["type"]+"_inner"
+    material = @params["collar_inner"]["value"]["material"]
+    material = @params["base"]["value"]["material"] if material == "default"
+    bg = material+"_#{@view}_collar_"+@params["collar"]["value"]["type"]+"_inner"
     @set_bg($(".collar-inner"), bg)
 
   cuffs_update: ->
-    prefix = @params["cuffs"]["value"]["material"]+"_#{@view}_cuffs_"+@params["cuffs"]["value"]["type"]
+    material = @params["cuffs"]["value"]["material"]
+    material = @params["base"]["value"]["material"] if material == "default"
+    prefix = material+"_#{@view}_cuffs_"+@params["cuffs"]["value"]["type"]
     @set_bg($(".cuffs-slim"), prefix+"_slim")
     @set_bg($(".cuffs-inner"), prefix+"_inner")
