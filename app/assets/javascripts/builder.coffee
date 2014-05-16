@@ -43,6 +43,10 @@ class App.Builder
       value["updater"].call(@)
 
   update: (params)->
+    unless params["view"] == null
+      @view = params["view"]
+      @update_all()
+      return
     for key,value of params
       unless @eqs(@params[key]["value"], value)
         @update_hash(@params[key]["value"], value)
