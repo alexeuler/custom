@@ -2,7 +2,5 @@ window.App||={}
 class App.Material
   constructor: ->
     $(".material-cell").on "click", (e)->
-      id = parseInt(e.target.id)
-      material = App.materials[id]
-      alert material
+      material = $(e.target).attr("fabric-name")
       App.builder.update base: material: material
