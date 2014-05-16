@@ -1,0 +1,13 @@
+<div class="material-container">
+<table>
+  <tbody>
+    <%25.times do |row|%>
+      <tr id="<%=row%>">
+      <%5.times do |col|%>
+        <td id="<%=col%>" class="material-cell" style="background-position: left -<%=(row*5+col)*100%>px"></td>
+      <%end%>
+      </tr>
+    <%end%>
+  </tbody>
+</table>
+</div>
