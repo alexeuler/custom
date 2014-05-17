@@ -20,7 +20,9 @@
     <div class="tab-pane active" id="base-material">
       <%=render partial: "shared/material_container", locals: {name: "base-material-container"}	  %>
     </div>
-    <div class="tab-pane" id="collar"></div>
+    <div class="tab-pane" id="collar">
+      <%=render partial: "shared/item_container", locals: {name: "collar-container",names: @collar_names, images: @collar_images} %>
+    </div>
     <div class="tab-pane" id="collar-material">
       <%=render partial: "shared/material_container", locals: {name: "collar-material-container"}	  %>
     </div>
@@ -31,11 +33,15 @@
     <div class="tab-pane" id="sleeves-material">
       <%=render partial: "shared/material_container", locals: {name: "sleeves-material-container"}	  %>
     </div>
-    <div class="tab-pane" id="cuffs"></div>
+    <div class="tab-pane" id="cuffs">
+      <%=render partial: "shared/item_container", locals: {name: "cuff-container",names: @cuff_names, images: @cuff_images} %>
+    </div>
     <div class="tab-pane" id="cuffs-material">
       <%=render partial: "shared/material_container", locals: {name: "cuffs-material-container"}	  %>
     </div>
-    <div class="tab-pane" id="buttons"></div>
+    <div class="tab-pane" id="buttons">
+      <%=render partial: "shared/item_container", locals: {name: "buttons-container",names: @button_names, images: @button_images} %>
+    </div>
     <div class="tab-pane" id="buttons-material">
       <%=render partial: "shared/material_container", locals: {name: "buttons-material-container"}	  %>
     </div>
