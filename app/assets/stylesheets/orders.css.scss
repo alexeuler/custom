@@ -74,7 +74,7 @@
 .order-block {
   position: absolute;
   right: 20px;
-  top: 40px;
+  top: 0px;
   text-align: right;
 
 }
@@ -89,4 +89,5 @@
 
 .tab-content {
   border-left: 1px dashed gray;
+  border-right: 1px dashed gray;
 }
