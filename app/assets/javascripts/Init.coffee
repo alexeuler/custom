@@ -54,7 +54,13 @@ $ ->
     if value == "option1"
       App.builder.update sleeves:
           type: "long"
+      $(".demo-pane .cuffs").show()
+      $(".demo-pane .cuffs-inner").show()
+      $(".demo-pane .cuffs-buttons").show()
     else
       App.builder.update sleeves:
           type: "short"
+      $(".demo-pane .cuffs").hide()
+      $(".demo-pane .cuffs-inner").hide()
+      $(".demo-pane .cuffs-buttons").hide()
 
