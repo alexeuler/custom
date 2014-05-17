@@ -1,4 +1,3 @@
-
 <div class="selection-pane col-lg-4">
   <!-- Nav tabs -->
   <ul class="nav nav-tabs">
@@ -18,16 +17,16 @@
   <!-- Tab panes -->
   <div class="tab-content">
     <div class="tab-pane active" id="base-material">
-      <%=render partial: "shared/material_container", locals: {name: "base-material-container"}	  %>
+      <%= render partial: "shared/material_container", locals: {name: "base-material-container"} %>
     </div>
     <div class="tab-pane" id="collar">
-      <%=render partial: "shared/item_container", locals: {name: "collar-container",names: @collar_names, images: @collar_images} %>
+      <%= render partial: "shared/item_container", locals: {name: "collar-container", names: @collar_names, images: @collar_images} %>
     </div>
     <div class="tab-pane" id="collar-material">
-      <%=render partial: "shared/material_container", locals: {name: "collar-material-container"}	  %>
+      <%= render partial: "shared/material_container", locals: {name: "collar-material-container"} %>
     </div>
     <div class="tab-pane" id="collar-material-inner">
-      <%=render partial: "shared/material_container", locals: {name: "collar-material-inner-container"}	  %>
+      <%= render partial: "shared/material_container", locals: {name: "collar-material-inner-container"} %>
     </div>
     <div class="tab-pane" id="sleeves">
       <div class="btn-group" data-toggle="buttons">
@@ -40,30 +39,37 @@
       </div>
     </div>
     <div class="tab-pane" id="sleeves-material">
-      <%=render partial: "shared/material_container", locals: {name: "sleeves-material-container"}	  %>
+      <%= render partial: "shared/material_container", locals: {name: "sleeves-material-container"} %>
     </div>
     <div class="tab-pane" id="cuffs">s
-      <%=render partial: "shared/item_container", locals: {name: "cuffs-container",names: @cuff_names, images: @cuff_images} %>
+      <%= render partial: "shared/item_container", locals: {name: "cuffs-container", names: @cuff_names, images: @cuff_images} %>
     </div>
     <div class="tab-pane" id="cuffs-material">
-      <%=render partial: "shared/material_container", locals: {name: "cuffs-material-container"}	  %>
+      <%= render partial: "shared/material_container", locals: {name: "cuffs-material-container"} %>
     </div>
     <div class="tab-pane" id="buttons">
-      <%=render partial: "shared/item_container", locals: {name: "buttons-container",names: @button_names, images: @button_images} %>
+      <%= render partial: "shared/item_container", locals: {name: "buttons-container", names: @button_names, images: @button_images} %>
     </div>
     <div class="tab-pane" id="buttons-material">
-      <%=render partial: "shared/material_container", locals: {name: "buttons-material-container"}	  %>
+      <%= render partial: "shared/material_container", locals: {name: "buttons-material-container"} %>
     </div>
   </div>
 
 
 </div>
 <div class="demo-pane col-lg-8">
-    <%=render partial: "shared/demo_container"	  %>
+  <%= render partial: "shared/demo_container" %>
 </div>
 
-<h1>New order</h1>
+<button type="button" data-toggle="modal" data-target="#myModal" class="btn btn-default">Купить</button>
 
-<%= render 'form' %>
+<div class="modal fade bs-example-modal-sm" id="myModal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="order-form">
+        <%= render 'form' %>
+      </div>
+    </div>
+  </div>
+</div>
 
-<%= link_to 'Back', orders_path %>

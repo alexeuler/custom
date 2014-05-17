@@ -1,41 +1,16 @@
-<%= form_for(@order) do |f| %>
-  <% if @order.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@order.errors.count, "error") %> prohibited this order from being saved:</h2>
-
-      <ul>
-      <% @order.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <div class="field">
-    <%= f.label :first_name %><br>
-    <%= f.text_field :first_name %>
+<%= form_for(@order, html: {role: "form"}) do |f| %>
+  <div class="form-group">
+    <%= f.label "Имя" %><br>
+    <%= f.text_field :first_name, class: "form-control" %>
   </div>
-  <div class="field">
-    <%= f.label :last_name %><br>
-    <%= f.text_field :last_name %>
+  <div class="form-group">
+    <%= f.label "Телефон или Email" %><br>
+    <%= f.text_field :address, class: "form-control" %>
   </div>
-  <div class="field">
-    <%= f.label :address %><br>
-    <%= f.text_field :address %>
-  </div>
-  <div class="field">
-    <%= f.label :string %><br>
-    <%= f.text_field :string %>
-  </div>
-  <div class="field">
-    <%= f.label :comments %><br>
-    <%= f.text_area :comments %>
-  </div>
-  <div class="field">
-    <%= f.label :params %><br>
-    <%= f.text_field :params %>
+  <div class="form-group">
+    <%= f.hidden_field :params %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Заказать", class: "btn btn-primary" %>
   </div>
 <% end %>
