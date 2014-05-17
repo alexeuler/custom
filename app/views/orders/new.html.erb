@@ -59,9 +59,13 @@
 </div>
 <div class="demo-pane col-lg-8">
   <%= render partial: "shared/demo_container" %>
+  <div class="order-block">
+    <h1>3000 руб</h1>
+    <button type="button" id="order" data-toggle="modal" data-target="#myModal" class="btn btn-primary btn-lg">Заказать</button>
+  </div>
 </div>
 
-<button type="button" data-toggle="modal" data-target="#myModal" class="btn btn-default">Купить</button>
+
 
 <div class="modal fade bs-example-modal-sm" id="myModal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-sm">

@@ -38,6 +38,8 @@ class App.Builder
           type: "round"
         updater: @cuffs_update
 
+  export: ->
+    JSON.stringify @params
   update_all: ->
     for key, value of @params
       value["updater"].call(@)

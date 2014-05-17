@@ -64,3 +64,5 @@ $ ->
       $(".demo-pane .cuffs-inner").hide()
       $(".demo-pane .cuffs-buttons").hide()
 
+  $(".order-form").find("input").on "click", (e) ->
+    $(".order-form #order_params").attr("value", App.builder.export())
