@@ -1,6 +1,7 @@
-<div class="selection-pane col-lg-4">
+<div class="selection-pane col-lg-6">
   <!-- Nav tabs -->
-  <ul class="nav nav-tabs">
+  <div class = "col-lg-4">
+  <ul class="nav nav-pills nav-stacked">
     <li class="active"><a href="#base-material" data-toggle="tab">Основной материал</a></li>
     <li><a href="#collar" data-toggle="tab">Тип воротничка</a></li>
     <li><a href="#collar-material" data-toggle="tab">Материал воротничка</a></li>
@@ -9,13 +10,12 @@
     <li><a href="#sleeves-material" data-toggle="tab">Материал рукавов</a></li>
     <li><a href="#cuffs" data-toggle="tab">Манжеты</a></li>
     <li><a href="#cuffs-material" data-toggle="tab">Материал манжетов</a></li>
-
     <li><a href="#buttons" data-toggle="tab">Пуговицы</a></li>
     <li><a href="#buttons-material" data-toggle="tab">Материал под пуговицами</a></li>
   </ul>
-
+  </div>
   <!-- Tab panes -->
-  <div class="tab-content">
+  <div class="tab-content col-lg-8">
     <div class="tab-pane active" id="base-material">
       <%= render partial: "shared/material_container", locals: {name: "base-material-container"} %>
     </div>
@@ -57,7 +57,7 @@
 
 
 </div>
-<div class="demo-pane col-lg-8">
+<div class="demo-pane col-lg-6">
   <%= render partial: "shared/demo_container" %>
   <div class="order-block">
     <h1>3000 руб</h1>
