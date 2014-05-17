@@ -5,10 +5,12 @@
     <li class="active"><a href="#base-material" data-toggle="tab">Основной материал</a></li>
     <li><a href="#collar" data-toggle="tab">Тип воротничка</a></li>
     <li><a href="#collar-material" data-toggle="tab">Материал воротничка</a></li>
+    <li><a href="#collar-material-inner" data-toggle="tab">Материал воротничка внутри</a></li>
     <li><a href="#sleeves" data-toggle="tab">Рукава</a></li>
     <li><a href="#sleeves-material" data-toggle="tab">Материал рукавов</a></li>
     <li><a href="#cuffs" data-toggle="tab">Манжеты</a></li>
     <li><a href="#cuffs-material" data-toggle="tab">Материал манжетов</a></li>
+
     <li><a href="#buttons" data-toggle="tab">Пуговицы</a></li>
     <li><a href="#buttons-material" data-toggle="tab">Материал под пуговицами</a></li>
   </ul>
@@ -21,6 +23,9 @@
     <div class="tab-pane" id="collar"></div>
     <div class="tab-pane" id="collar-material">
       <%=render partial: "shared/material_container", locals: {name: "collar-material-container"}	  %>
+    </div>
+    <div class="tab-pane" id="collar-material-inner">
+      <%=render partial: "shared/material_container", locals: {name: "collar-material-inner-container"}	  %>
     </div>
     <div class="tab-pane" id="sleeves"></div>
     <div class="tab-pane" id="sleeves-material">
