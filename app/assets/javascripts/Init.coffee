@@ -26,3 +26,15 @@ $ ->
   $(".buttons-material-container .material-cell").on "click", (e)->
     material = $(e.target).attr("fabric-name")
     App.builder.update base_inner: material: material
+
+  $(".cuffs-container .item-cell").on "click", (e)->
+    type = $(e.target).attr("name")
+    App.builder.update cuffs: type: type
+
+  $(".buttons-container .item-cell").on "click", (e)->
+    type = $(e.target).attr("name")
+    App.builder.update buttons: color: type
+
+  $(".collar-container .item-cell").on "click", (e)->
+    type = $(e.target).attr("name")
+    App.builder.update collar: type: type
