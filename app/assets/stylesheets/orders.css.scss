@@ -4,12 +4,13 @@
 
 
 .material-container {
-  width: 600px;
-  height: 600px;
-  overflow: scroll;
+//  width: 600px;
+   max-height: 660px;
+   overflow: scroll;
   .material-cell {
     width: 95px;
     height: 95px;
+    display: inline-block;
     background-image: url("/images/fabrics.jpg");
   }
 }
@@ -84,4 +85,8 @@
 
 .nav-stacked {
   font-size: 20px;
+}
+
+.tab-content {
+  border-left: 1px dashed gray;
 }

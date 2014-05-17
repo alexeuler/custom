@@ -1,15 +1,5 @@
 <div class="material-container <%=name%>">
-  <table>
-    <tbody>
-    <% 25.times do |row| %>
-        <tr id="<%= row %>">
-          <% 5.times do |col| %>
-              <% if row*5+col < 123 %>
-                  <td id="<%= row*5+col %>" class="material-cell" fabric-name="<%= @names[row*5+col] %>" style="background-position: left -<%=@pos[row*5+col]%>px"></td>
-              <% end %>
-          <% end %>
-        </tr>
-    <% end %>
-    </tbody>
-  </table>
+  <%@names.length.times do |i|%>
+      <div id="<%= i %>" class="material-cell" fabric-name="<%= @names[i] %>" style="background-position: left -<%=@pos[i]%>px"></div>
+  <%	 end %>
 </div>
