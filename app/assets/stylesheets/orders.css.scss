@@ -80,8 +80,10 @@
 }
 
 .selection-pane {
-  padding: 70px 0px;
+  padding: 0px;
 }
+
+
 
 .nav-stacked {
   font-size: 20px;
@@ -90,4 +92,9 @@
 .tab-content {
   border-left: 1px dashed gray;
   border-right: 1px dashed gray;
+  padding: 70px 20px;
+}
+
+.item-tabs {
+  padding: 70px 20px;
 }
