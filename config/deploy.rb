@@ -30,7 +30,7 @@ before "deploy:cleanup", "deploy:no_sudo_prompt"
 before "deploy:cleanup", "deploy:sudo"
 after "deploy:cleanup", "deploy:sudo_prompt"
 after "deploy", "deploy:migrate"
-# before 'deploy:assets:precompile', 'deploy:symlink_db'
+before 'deploy:assets:precompile', 'deploy:symlink_db'
 # after 'deploy:migrate', 'deploy:generate_sitemap'
 
 set :default_environment, {
