@@ -1,16 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Custom</title>
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <title>Миллион</title>
+  <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 <div class="header">
+  <img src="/images/logo.png" alt="" style="display: inline-block; position: relative; top:-25px"/>
+  <span style="display: inline-block">
+  <h1 style="margin-top: 5px">Миллион</h1>
+  <h4>Огромный выбор рубашек, сшитых специально для Вас!</h4>
+      </span>
 </div>
 <div class="body">
-<%= yield %>
+  <%= yield %>
 </div>
 </body>
 </html>
