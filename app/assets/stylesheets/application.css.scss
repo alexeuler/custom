@@ -1,15 +1,19 @@
-$font-size-base:16px;
+@import "fonts";
+@import "pre_bootstrap";
 @import "bootstrap";
 @import "orders";
 @import "scaffolds";
 @import "front";
 
 .header {
-  height:95px;
-  border-bottom: 1px dashed gray;
+  background-color: rgba(0,0,0, 0.7);
   position: fixed;
   width: 100%;
   margin: 0;
+  h1{
+    margin:10px;
+    color:rgb(200, 200, 200);
+  }
 }
 
 .body {

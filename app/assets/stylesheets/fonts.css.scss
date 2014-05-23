@@ -1,0 +1,29 @@
+ 
+@font-face {
+    font-family: 'RobotoLight';
+    src: font-url('Roboto-Light-webfont.eot');
+    src: font-url('Roboto-Light-webfont.eot') format('embedded-opentype'),
+    font-url('Roboto-Light-webfont.svg') format('svg'),
+    font-url('Roboto-Light-webfont.ttf') format('truetype'),    
+    font-url('Roboto-Light-webfont.woff') format('woff');
+    }
+
+@font-face {
+    font-family: 'RobotoLight';
+    src: font-url('Roboto-Regular-webfont.eot');
+    src: font-url('Roboto-Regular-webfont.eot') format('embedded-opentype'),
+    font-url('Roboto-Regular-webfont.svg') format('svg'),    
+    font-url('Roboto-Regular-webfont.ttf') format('truetype'),    
+    font-url('Roboto-Regular-webfont.woff') format('woff');
+    font-weight:bold;
+    }
+
+
+@font-face {
+    font-family: 'RobotoCondensedLight';
+    src: font-url('RobotoCondensed-Light-webfont.eot');
+    src: font-url('RobotoCondensed-Light-webfont.eot') format('embedded-opentype'),
+    font-url('RobotoCondensed-Light-webfont.svg') format('svg'),    
+    font-url('RobotoCondensed-Light-webfont.ttf') format('truetype'),    
+    font-url('RobotoCondensed-Light-webfont.woff') format('woff');
+    }
