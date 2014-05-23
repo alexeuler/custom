@@ -10,7 +10,21 @@ p {
   font-size: $font-size-base;
 }
 
+.nav-button {
+  float:right;
+  height: 100%;
+  width:150px;
+  position: relative;
+  line-height: 65px;
+  text-align: center;
+  a{
+    font-size: $font-size-base * 1.5;
+    color: rgb(200,200,200);
+  }
+}
+
 .header {
+  height:65px;
   background-color: rgba(0,0,0, 0.7);
   position: fixed;
   width: 100%;
