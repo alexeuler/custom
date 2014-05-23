@@ -5,6 +5,11 @@
 @import "scaffolds";
 @import "front";
 
+p {
+  font-family: $font-family-base;
+  font-size: $font-size-base;
+}
+
 .header {
   background-color: rgba(0,0,0, 0.7);
   position: fixed;
