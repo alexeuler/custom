@@ -1,5 +1,7 @@
 Custom::Application.routes.draw do
   get "front/show"
+  get "about", to: "front#about"
+  get "details", to: "front#details"
   resources :orders
 
   # The priority is based upon order of creation: first created -> highest priority.
