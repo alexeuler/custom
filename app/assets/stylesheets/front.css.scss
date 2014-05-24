@@ -27,7 +27,9 @@
 
   ul li {
     font-size: $font-size-base*1.25;
-    line-height: $font-size-base*1.25 * 1.25;
+    line-height: $font-size-base*1.25;
+    font-family:$font-family-base;
+    margin-bottom: 20px;
   }
 
   p {
