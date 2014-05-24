@@ -8,10 +8,14 @@
 }
 
 
+.tab-content {
+  max-height: 680px;
+  overflow: scroll;
+
+}
+
 .material-container {
 //  width: 600px;
-   max-height: 660px;
-   overflow: scroll;
   .material-cell {
     @include bordered;
     width: 90px;
@@ -127,4 +131,12 @@
 
 ul li a:hover {
   color: rgb(128, 119, 116);
+}
+
+.item-cell {
+  display: inline-block;
+  width: 180px;
+  height: 180px;
+  background-size: cover;
+  @include bordered;
 }
