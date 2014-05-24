@@ -45,6 +45,9 @@ p {
   z-index: -1;
 }
 
-li.active, .btn-primary {
-
+li.active a, .btn-primary {
+  @include gradient-vertical-three-colors(#2FB0F8, #1B1BC5, 75%, #0048ae);
+  border-radius: 10px;
+//  @include bordered;
 }
+
