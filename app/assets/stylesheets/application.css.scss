@@ -35,6 +35,9 @@ p {
     margin:10px;
     color:rgb(200, 200, 200);
   }
+  .nav-button a.active {
+    text-decoration: underline;
+  }
 }
 
 .body {

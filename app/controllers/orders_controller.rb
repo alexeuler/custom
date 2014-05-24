@@ -25,7 +25,7 @@ class OrdersController < ApplicationController
     @cuff_images = @cuff_names.map {|name| "item_cuff_#{name}.jpg"}
     @button_names = %w(white purple brown gray darkgray winered saxeblue pink navy)
     @button_images = @button_names.map {|name| "item_button_#{name}.jpg"}
-
+    @tab = 3
   end
 
   # GET /orders/1/edit
