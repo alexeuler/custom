@@ -12,11 +12,21 @@
 
 .front-container {
   color:rgb(200, 200, 200);
-  padding: 40px;
+  padding: 30px;
   position: relative;
   width: 90%;
   height: 60%;
   top:25%;
+  min-width: 800px;
   margin: 0 auto;
   background-color: rgba(0, 0, 0, 0.7);
+
+  h1 {
+    margin: 0;
+  }
+}
+
+.carousel img {
+  max-height: 100%;
+  margin: 0 auto;
 }

@@ -1,11 +1,17 @@
 <div class="front-background">
   <div class="front-container">
-    <h1>Первое онлайн ателье в России</h1>
-    <p>Заказав у нас всего одну рубашку, вы уже не сможете остановиться</p>
-
-    <form action="<%= new_order_path %>">
-      <input type="submit" class="btn btn-primary btn-lg" value="Узнать больше"/>
-    </form>
+    <div class="row">
+      <div class="col-xs-6">
+        <h1>Первое онлайн ателье в России</h1>
+        <p>Заказав у нас всего одну рубашку, вы уже не сможете остановиться</p>
+        <form action="<%= new_order_path %>">
+          <input type="submit" class="btn btn-primary btn-lg" value="Узнать больше"/>
+        </form>
+      </div>
+      <div class="col-xs-6">
+        <%=render partial: "shirts_carousel"%>
+      </div>
+    </div>
   </div>
 </div>
 
