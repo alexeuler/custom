@@ -2,68 +2,74 @@
   <div class="selection-pane col-lg-6 col-md-12 col-sm-12">
     <div class="row">
       <!-- Nav tabs -->
-      <div class="item-tabs col-lg-4 col-md-6 col-sm-6">
-        <ul class="nav nav-pills nav-stacked">
-          <li class="active"><a href="#base-material" data-toggle="tab">Основной материал</a></li>
-          <li><a href="#collar" data-toggle="tab">Тип воротничка</a></li>
-          <li><a href="#collar-material" data-toggle="tab">Материал воротничка</a></li>
-          <li><a href="#collar-material-inner" data-toggle="tab">Материал воротничка внутри</a></li>
-          <li><a href="#sleeves" data-toggle="tab">Рукава</a></li>
-          <li><a href="#sleeves-material" data-toggle="tab">Материал рукавов</a></li>
-          <li><a href="#cuffs" data-toggle="tab">Манжеты</a></li>
-          <li><a href="#cuffs-material" data-toggle="tab">Материал манжетов</a></li>
-          <li><a href="#buttons" data-toggle="tab">Пуговицы</a></li>
-          <li><a href="#buttons-material" data-toggle="tab">Материал под пуговицами</a></li>
-        </ul>
+      <div class="col-lg-4 col-md-6 col-sm-6">
+        <div class="item-tabs">
+          <ul class="nav nav-pills nav-stacked">
+            <li class="active"><a href="#base-material" data-toggle="tab">Основной материал</a></li>
+            <li><a href="#collar" data-toggle="tab">Тип воротничка</a></li>
+            <li><a href="#collar-material" data-toggle="tab">Материал воротничка</a></li>
+            <li><a href="#collar-material-inner" data-toggle="tab">Материал воротничка внутри</a></li>
+            <li><a href="#sleeves" data-toggle="tab">Рукава</a></li>
+            <li><a href="#sleeves-material" data-toggle="tab">Материал рукавов</a></li>
+            <li><a href="#cuffs" data-toggle="tab">Манжеты</a></li>
+            <li><a href="#cuffs-material" data-toggle="tab">Материал манжетов</a></li>
+            <li><a href="#buttons" data-toggle="tab">Пуговицы</a></li>
+            <li><a href="#buttons-material" data-toggle="tab">Материал под пуговицами</a></li>
+          </ul>
+        </div>
       </div>
       <!-- Tab panes -->
-      <div class="tab-content col-lg-8 col-md-6 col-sm-6">
-        <div class="tab-pane active" id="base-material">
-          <%= render partial: "shared/material_container", locals: {name: "base-material-container"} %>
-        </div>
-        <div class="tab-pane" id="collar">
-          <%= render partial: "shared/item_container", locals: {name: "collar-container", names: @collar_names, images: @collar_images} %>
-        </div>
-        <div class="tab-pane" id="collar-material">
-          <%= render partial: "shared/material_container", locals: {name: "collar-material-container"} %>
-        </div>
-        <div class="tab-pane" id="collar-material-inner">
-          <%= render partial: "shared/material_container", locals: {name: "collar-material-inner-container"} %>
-        </div>
-        <div class="tab-pane" id="sleeves" style="height: 500px">
-          <div class="btn-group" data-toggle="buttons">
-            <label class="btn btn-primary active">
-              <input type="radio" name="options" id="option1"> Длинные
-            </label>
-            <label class="btn btn-primary">
-              <input type="radio" name="options" id="option2"> Короткие
-            </label>
+      <div class="col-lg-8 col-md-6 col-sm-6">
+        <div class="tab-content">
+          <div class="tab-pane active" id="base-material">
+            <%= render partial: "shared/material_container", locals: {name: "base-material-container"} %>
           </div>
-        </div>
-        <div class="tab-pane" id="sleeves-material">
-          <%= render partial: "shared/material_container", locals: {name: "sleeves-material-container"} %>
-        </div>
-        <div class="tab-pane" id="cuffs">
-          <%= render partial: "shared/item_container", locals: {name: "cuffs-container", names: @cuff_names, images: @cuff_images} %>
-        </div>
-        <div class="tab-pane" id="cuffs-material">
-          <%= render partial: "shared/material_container", locals: {name: "cuffs-material-container"} %>
-        </div>
-        <div class="tab-pane" id="buttons">
-          <%= render partial: "shared/item_container", locals: {name: "buttons-container", names: @button_names, images: @button_images} %>
-        </div>
-        <div class="tab-pane" id="buttons-material">
-          <%= render partial: "shared/material_container", locals: {name: "buttons-material-container"} %>
+          <div class="tab-pane" id="collar">
+            <%= render partial: "shared/item_container", locals: {name: "collar-container", names: @collar_names, images: @collar_images} %>
+          </div>
+          <div class="tab-pane" id="collar-material">
+            <%= render partial: "shared/material_container", locals: {name: "collar-material-container"} %>
+          </div>
+          <div class="tab-pane" id="collar-material-inner">
+            <%= render partial: "shared/material_container", locals: {name: "collar-material-inner-container"} %>
+          </div>
+          <div class="tab-pane" id="sleeves" style="height: 500px">
+            <div class="btn-group" data-toggle="buttons">
+              <label class="btn btn-primary active">
+                <input type="radio" name="options" id="option1"> Длинные
+              </label>
+              <label class="btn btn-primary">
+                <input type="radio" name="options" id="option2"> Короткие
+              </label>
+            </div>
+          </div>
+          <div class="tab-pane" id="sleeves-material">
+            <%= render partial: "shared/material_container", locals: {name: "sleeves-material-container"} %>
+          </div>
+          <div class="tab-pane" id="cuffs">
+            <%= render partial: "shared/item_container", locals: {name: "cuffs-container", names: @cuff_names, images: @cuff_images} %>
+          </div>
+          <div class="tab-pane" id="cuffs-material">
+            <%= render partial: "shared/material_container", locals: {name: "cuffs-material-container"} %>
+          </div>
+          <div class="tab-pane" id="buttons">
+            <%= render partial: "shared/item_container", locals: {name: "buttons-container", names: @button_names, images: @button_images} %>
+          </div>
+          <div class="tab-pane" id="buttons-material">
+            <%= render partial: "shared/material_container", locals: {name: "buttons-material-container"} %>
+          </div>
         </div>
       </div>
     </div>
 
   </div>
-  <div class="demo-pane col-lg-6 col-md-12 col-sm-12">
-    <%= render partial: "shared/demo_container" %>
-    <div class="order-block">
-      <h1>3000 руб</h1>
-      <button type="button" id="order" data-toggle="modal" data-target="#myModal" class="btn btn-primary btn-lg">Заказать</button>
+  <div class="col-lg-6 col-md-12 col-sm-12">
+    <div class="demo-pane">
+      <%= render partial: "shared/demo_container" %>
+      <div class="order-block">
+        <h1>3000 руб</h1>
+        <button type="button" id="order" data-toggle="modal" data-target="#myModal" class="btn btn-primary btn-lg">Заказать</button>
+      </div>
     </div>
   </div>
 

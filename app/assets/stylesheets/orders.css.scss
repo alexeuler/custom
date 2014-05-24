@@ -4,16 +4,19 @@
 
 .constructor-container {
   padding-top: 65px;
+  @include gradient-vertical-three-colors(#f8fbf6, #aacedc, 75%, #bed3f2)
 }
 
 
 .material-container {
 //  width: 600px;
-   max-height: 500px;
+   max-height: 660px;
    overflow: scroll;
   .material-cell {
-    width: 95px;
-    height: 95px;
+    @include bordered;
+    width: 90px;
+    height: 90px;
+    margin:1px;
     display: inline-block;
     background-image: url("/images/fabrics.jpg");
   }
@@ -94,11 +97,30 @@
 }
 
 .tab-content {
-  border-left: 1px dashed gray;
-  border-right: 1px dashed gray;
-  padding: 70px 20px;
+  text-align: center;
 }
 
-.item-tabs {
-  padding: 70px 20px;
+.item-tabs li{
+  font-family: $font-family-base;
+}
+
+.tab-content, .item-tabs, .demo-pane {
+  @include bordered;;
+  margin:5px 0px;
+  padding: 10px;
+  background-color: rgba(255,255,255,0.3);
+  height:680px;
+}
+
+.row {
+  margin:0px;
+}
+
+//
+//.item-tabs {
+//  position: relative;
+//  left:20px;
+//}
+.col-lg-4, .col-lg-6, .col-md-6, .col-sm-6, .col-lg-8 {
+  padding: 0px 5px;
 }

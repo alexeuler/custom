@@ -4,3 +4,7 @@ $font-family-base: "RobotoLight", Arial, sans-serif !important;
 $font-family-alt: "RobotoCondensedLight", Arial, sans-serif !important;
 $font-size-base:16px;
 $blockquote-border-color:#9dc79f;
+
+@mixin bordered(){
+  @include box-shadow(0px 0px 3px #000);
+}
