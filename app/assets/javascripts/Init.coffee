@@ -2,6 +2,7 @@ window.App ||= {}
 $ ->
   App.builder = new App.Builder
   App.builder.update_all()
+  $('.modal').appendTo($('body'))
 
   $(".base-material-container .material-cell").on "click", (e)->
     material = $(e.target).attr("fabric-name")
