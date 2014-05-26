@@ -6,14 +6,14 @@
         <p>Мы предлагаем на выбор миллионы вариантов классических рубашек. Прямо на нашем сайте
           вы сможете создать рубашку и сразу увидеть как она будет выглядеть в реальности.
           Мы гарантируем качество нашего продукта:
-          Вы будете довольны качеством и размерами рубашки или просто вернете ее нам. (<a href="/details" style="color: #2FB0F8">Подробнее...</a>)
+          Вы будете довольны качеством и размерами рубашки или просто вернете ее нам. (<a href="/details" id="details">Подробнее...</a>)
           </p>
         <form action="<%= new_order_path %>">
-          <input type="submit" class="btn btn-primary btn-lg" value="Выбрать рубашку"/>
+          <input type="submit" class="btn btn-primary btn-lg" value="Выбрать рубашку" id="order-from-main"/>
         </form>
         <br/>
         <p>Если у Вас есть какие-то вопросы, мы с радостью ответим на них!
-          Просто <a href="/about" style="color: #2FB0F8">напишите</a> или <a href="/about" style="color: #2FB0F8">позвоните</a> нам</p>
+          Просто <a href="/about" id="contacts1">напишите</a> или <a href="/about" id="contacts2">позвоните</a> нам</p>
       </div>
       <div class="col-xs-5">
         <%=render partial: "shirts_carousel"%>

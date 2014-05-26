@@ -54,6 +54,14 @@ li.active a, .btn-primary {
   border-radius: 10px;
 //  @include bordered;
 }
-a {
-  color: #2FB0F8;
+.body a {
+  color: #2FB0F8 !important;
+}
+
+.item-tabs a {
+  color: #333333 !important;
+}
+
+.item-tabs .active a {
+  color: #eee !important;
 }
