@@ -4,6 +4,24 @@ $ ->
   App.builder.update_all()
   $('.modal').appendTo($('body'))
 
+  $("#order").on "click", ->
+    yaCounter25080758.reachGoal('click_order')
+
+  $("#order-with-contacts").on "click", ->
+    yaCounter25080758.reachGoal('click_order_with_contacts')
+
+  $("#details").on "click", ->
+    yaCounter25080758.reachGoal('click_details')
+
+  $("#contacts1, #contacts2").on "click", ->
+    yaCounter25080758.reachGoal('click_contacts')
+
+  $("#order-from-main").on "click", ->
+    yaCounter25080758.reachGoal('click_order_from_main')
+
+  $("#order-from-details").on "click", ->
+    yaCounter25080758.reachGoal('click_order_from_details')
+
   $(".base-material-container .material-cell").on "click", (e)->
     material = $(e.target).attr("fabric-name")
     App.builder.update base:
