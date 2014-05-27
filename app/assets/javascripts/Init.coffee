@@ -7,7 +7,12 @@ $ ->
   $("#order").on "click", ->
     yaCounter25080758.reachGoal('click_order')
 
-  $("#order-with-contacts").on "click", ->
+  $("#order-with-contacts").on "click", (e)->
+    if $("#order_first_name").val() == "" or $("#order_address").val() == ""
+      alert "Пожалуйста, заполните все поля"
+      e.preventDefault()
+      e.stopPropagation()
+      return
     yaCounter25080758.reachGoal('click_order_with_contacts')
 
   $("#details").on "click", ->
