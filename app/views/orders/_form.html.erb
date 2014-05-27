@@ -1,3 +1,4 @@
+<h1> Форма экспресс-заказа</h1>
 <%= form_for(@order, html: {role: "form"}) do |f| %>
   <div class="form-group">
     <%= f.label "Имя" %><br>
@@ -10,6 +11,8 @@
   <div class="form-group">
     <%= f.hidden_field :params %>
   </div>
+<p>После заказа наш консультант свяжется с Вами для уточнения размеров
+и организации доставки</p>
   <div class="actions">
     <%= f.submit "Заказать", class: "btn btn-primary", id:"order-with-contacts" %>
   </div>
