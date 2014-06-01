@@ -1,4 +1,6 @@
 Custom::Application.routes.draw do
+  get '/auth/:provider/callback', to: 'oauth#create'
+  devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
   get "front/show"
   get "about", to: "front#about"
   get "details", to: "front#details"
