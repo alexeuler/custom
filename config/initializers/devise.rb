@@ -13,6 +13,8 @@ Devise.setup do |config|
   config.mailer_sender = 'please-change-me-at-config-initializers-devise@example.com'
   config.omniauth :facebook, ENV["CUSTOM_FB_APP_ID"], ENV["CUSTOM_FB_APP_SECRET"],
                   {:scope => 'email' }
+  config.omniauth :vkontakte, ENV["CUSTOM_VK_APP_ID"], ENV["CUSTOM_VK_APP_SECRET"]
+
   # Configure the class responsible to send e-mails.
   # config.mailer = 'Devise::Mailer'
 
