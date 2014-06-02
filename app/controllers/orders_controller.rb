@@ -1,5 +1,6 @@
 class OrdersController < ApplicationController
-  before_action :set_order, only: [:show, :edit, :update, :destroy]
+  before_action :check_signed_in
+  before_action :set_order,  only: [:show, :edit, :update, :destroy]
 
   # GET /orders
   # GET /orders.json
@@ -71,6 +72,13 @@ class OrdersController < ApplicationController
   end
 
   private
+
+    def check_signed_in
+      unless user_signed_in?
+        redirect_to new_user_session_path
+      end
+    end
+
     # Use callbacks to share common setup or constraints between actions.
     def set_order
       @order = Order.find(params[:id])

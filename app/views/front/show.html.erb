@@ -12,9 +12,6 @@
           <input type="submit" class="btn btn-primary btn-lg" value="Выбрать рубашку" id="order-from-main"/>
         </form>
         <br/>
-        <%=link_to "Sign in with Facebook", user_omniauth_authorize_path(:facebook)%>
-        <%=link_to "Sign in with Vkontakte", user_omniauth_authorize_path(:vkontakte)%>
-        <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
         <p>Если у Вас есть какие-то вопросы, мы с радостью ответим на них!
           Просто <a href="/about" id="contacts1">напишите</a> или <a href="/about" id="contacts2">позвоните</a> нам</p>
       </div>
