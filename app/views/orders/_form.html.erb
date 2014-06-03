@@ -1,11 +1,7 @@
 <h1> Форма экспресс-заказа</h1>
 <%= form_for(@order, html: {role: "form"}) do |f| %>
   <div class="form-group">
-    <%= f.label "Имя" %><br>
-    <%= f.text_field :first_name, class: "form-control" %>
-  </div>
-  <div class="form-group">
-    <%= f.label "Телефон или Email" %><br>
+    <%= f.label "Телефон" %><br>
     <%= f.text_field :address, class: "form-control" %>
   </div>
   <div class="form-group">
