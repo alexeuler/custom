@@ -1,4 +1,8 @@
-<h2 style="margin-top: 0px">Войти</h2>
+<!--<h2 style="margin-top: 0px">Войти</h2>-->
+<p>Для того, чтобы продолжить войдите через Вконтакте или Facebook</p>
+<%= render "devise/shared/links" %>
+
+<p>Или зайдите с помощью email</p>
 
 <%= form_for(resource, as: resource_name, url: session_path(resource_name), html: {role: "form"}) do |f| %>
   <div><%= f.label :email %><br />
@@ -10,4 +14,7 @@
   <div><%= f.submit "Войти", class: "btn btn-primary" %></div>
 <% end %>
 
-<%= render "devise/shared/links" %>
+<%- if devise_mapping.registerable? && controller_name != 'registrations' %>
+    <%= link_to "Или зарегистрируйтесь на нашем сайте", new_registration_path(resource_name) %><br />
+<% end -%>
+
