@@ -27,6 +27,15 @@ $ ->
   $("#order-from-details").on "click", ->
     yaCounter25080758.reachGoal('click_order_from_details')
 
+  $(".social-button-fb").on "click", ->
+    yaCounter25080758.reachGoal('click_fb')
+
+  $(".social-button-vk").on "click", ->
+    yaCounter25080758.reachGoal('click_vk')
+
+  $(".register-button").on "click", ->
+    yaCounter25080758.reachGoal('click_sign_up')
+
   $(".base-material-container .material-cell").on "click", (e)->
     material = $(e.target).attr("fabric-name")
     App.builder.update base:
