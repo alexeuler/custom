@@ -1,6 +1,5 @@
 window.App ||= {}
 $ ->
-  alert "init"
   App.builder = new App.Builder
   App.builder.update_all()
   $('.modal').appendTo($('body'))
