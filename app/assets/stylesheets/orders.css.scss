@@ -78,13 +78,32 @@
   padding: 10px 20px;
 }
 
+.size-container {
+  @include bordered;
+  text-align: center;
+  img {
+    width: 95%;
+    height:178px;
+  }
+  select{
+
+    font-family:'Arial';
+    font-size:16px;
+    width:80%
+  }
+}
+
+
 .demo-pane {
   position: relative;
 }
 
 .popover {
   max-width: none;
-//  width: 720px !important;
+}
+
+.modal-dialog, .modal-content {
+  width:970px !important;
 }
 
 .order-block {
