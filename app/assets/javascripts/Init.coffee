@@ -14,6 +14,11 @@ $ ->
 
   $('.modal').appendTo($('body'))
 
+  $("#next").on "click", ->
+    $("#myModal").modal('hide')
+    $("#orderModal").modal('show')
+    yaCounter25080758.reachGoal('click_size')
+
   $("#order").on "click", ->
     yaCounter25080758.reachGoal('click_order')
 
