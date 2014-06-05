@@ -26,6 +26,7 @@ p {
 }
 
 .header {
+  padding-left: 10px;
   height:65px;
   background-color: rgba(0,0,0, 0.7);
   position: fixed;
@@ -34,6 +35,8 @@ p {
   min-width: 900px;
   h1{
     margin:10px;
+    position: relative;
+    top:8px;
     color:rgb(200, 200, 200);
   }
   .nav-button a.active {
