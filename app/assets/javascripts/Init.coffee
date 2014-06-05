@@ -2,6 +2,16 @@ window.App ||= {}
 $ ->
   App.builder = new App.Builder
   App.builder.update_all()
+
+  $(".material-cell").popover {
+    trigger:"hover"
+    title: "100% хлопок"
+    html: true
+    placement: "bottom"
+    content: ->
+      '<img src="/images/item_full_fabric_' + $(this).attr('fabric-name') + '.jpg"/>'
+  }
+
   $('.modal').appendTo($('body'))
 
   $("#order").on "click", ->

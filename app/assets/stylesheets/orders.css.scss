@@ -82,6 +82,11 @@
   position: relative;
 }
 
+.popover {
+  max-width: none;
+//  width: 720px !important;
+}
+
 .order-block {
   position: absolute;
   right: 20px;
