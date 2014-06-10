@@ -74,9 +74,9 @@ class OrdersController < ApplicationController
   private
 
     def check_signed_in
-      unless user_signed_in?
-        redirect_to new_user_session_path
-      end
+      # unless user_signed_in?
+      #   redirect_to new_user_session_path
+      # end
     end
 
     # Use callbacks to share common setup or constraints between actions.
